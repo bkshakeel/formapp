@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block   content %}
+<form action="/frmexp/create/" method="post" >{% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" name="submit" value="create" />
+</form>
+
+{% for o in article %}
+  {{o}}
+{% endfor %}
+
+  click <a href="/accounts/logout">here</a>
+
+{% endblock %}
